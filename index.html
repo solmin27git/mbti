@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>심플 MBTI 테스트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <div id="start-screen" class="screen active">
+            <h1>나의 MBTI 알아보기</h1>
+            <p>간단한 질문을 통해 당신의 성향을 분석합니다.</p>
+            <button onclick="goToNameScreen()">시작하기</button>
+        </div>
+
+        <div id="name-screen" class="screen">
+            <h1>이름을 입력해주세요</h1>
+            <p>테스트 결과에 사용될 이름을 알려주세요.</p>
+            <input type="text" id="user-name" placeholder="홍길동" autocomplete="off">
+            <button onclick="startQuiz()">확인</button>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <h1 id="question-text">질문이 들어갈 자리입니다.</h1>
+            <div id="answer-buttons">
+                </div>
+        </div>
+
+        <div id="end-screen" class="screen">
+            <h1>검사가 완료되었습니다!</h1>
+            <p>모든 질문에 답변하셨습니다. 결과를 확인해보세요.</p>
+            <button onclick="showResult()">결과 보기</button>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h1>테스트 결과</h1>
+            <p><span id="result-user" class="result-name">사용자</span>님의 성향은?</p>
+            <div id="result-mbti" class="mbti-type">ESTJ</div>
+            <p id="result-desc">성향에 대한 설명이 들어갈 자리입니다.</p>
+            <button onclick="goHome()" style="background-color: #6c757d;">홈으로 돌아가기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
